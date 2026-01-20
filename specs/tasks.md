@@ -87,16 +87,18 @@ This document contains all development tasks for the Go CLI calendar tool, organ
 **Linked User Stories:** None (Infrastructure)
 
 **Subtasks:**
-- [ ] Create `Makefile` with common commands (build, test, lint, run)
-- [ ] Add `.editorconfig` for consistent formatting
-- [ ] Set up `golangci-lint` configuration
-- [ ] Create `Dockerfile` for containerized builds (optional)
-- [ ] Add GitHub Actions workflow for CI (optional)
+- [x] Create `Makefile` with common commands (build, test, lint, run)
+- [x] Add `.editorconfig` for consistent formatting
+- [x] Set up `golangci-lint` configuration
+- [x] Create `Dockerfile` for containerized builds (optional)
+- [x] Add GitHub Actions workflow for CI (optional)
 
 **Acceptance Criteria:**
-- `make build` creates the binary
-- `make test` runs all tests
-- `make lint` runs linting
+- [x] `make build` creates the binary
+- [x] `make test` runs all tests
+- [x] `make lint` runs linting
+
+**Status:** ✅ COMPLETED
 
 ---
 
@@ -109,20 +111,22 @@ This document contains all development tasks for the Go CLI calendar tool, organ
 **Linked User Stories:** US-001, US-010
 
 **Subtasks:**
-- [ ] Create `internal/config/config.go` with Config struct
-- [ ] Implement environment variable loading:
+- [x] Create `internal/config/config.go` with Config struct
+- [x] Implement environment variable loading:
   - `GOOGLE_CALENDAR_CREDENTIALS` - path to credentials JSON
   - `GOOGLE_CALENDAR_TOKEN` - path to token file
   - `GOOGLE_CALENDAR_ID` - target calendar ID (default: "primary")
-- [ ] Implement configuration file loading from `~/.config/calgo/config.yaml`
-- [ ] Implement configuration priority: CLI flags > Env vars > Config file > Defaults
-- [ ] Add validation for required configuration values
-- [ ] Write unit tests for configuration loading
+- [x] Implement configuration file loading from `~/.config/calgo/config.yaml`
+- [x] Implement configuration priority: CLI flags > Env vars > Config file > Defaults
+- [x] Add validation for required configuration values
+- [x] Write unit tests for configuration loading
 
 **Acceptance Criteria:**
-- Configuration loads from environment variables
-- Missing required config shows clear error
-- Priority order is respected
+- [x] Configuration loads from environment variables
+- [x] Missing required config shows clear error
+- [x] Priority order is respected
+
+**Status:** ✅ COMPLETED
 
 ---
 
