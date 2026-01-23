@@ -137,23 +137,25 @@ This document contains all development tasks for the Go CLI calendar tool, organ
 **Linked User Stories:** US-002
 
 **Subtasks:**
-- [ ] Create `internal/auth/oauth.go` with authentication logic
-- [ ] Implement OAuth2 config loading from credentials JSON
-- [ ] Implement first-time authentication flow:
+- [x] Create `internal/auth/oauth.go` with authentication logic
+- [x] Implement OAuth2 config loading from credentials JSON
+- [x] Implement first-time authentication flow:
   - Generate authorization URL
   - Open browser for user authorization
   - Handle OAuth2 callback
   - Save token to file
-- [ ] Implement token loading from saved file
-- [ ] Implement automatic token refresh
-- [ ] Handle token refresh failures with re-authentication prompt
-- [ ] Write unit tests with mocked OAuth2 flow
+- [x] Implement token loading from saved file
+- [x] Implement automatic token refresh
+- [x] Handle token refresh failures with re-authentication prompt
+- [x] Write unit tests with mocked OAuth2 flow
 
 **Acceptance Criteria:**
-- First-time auth opens browser and saves token
-- Subsequent runs use saved token
-- Expired tokens are automatically refreshed
-- Failed refresh prompts re-authentication
+- [x] First-time auth opens browser and saves token
+- [x] Subsequent runs use saved token
+- [x] Expired tokens are automatically refreshed
+- [x] Failed refresh prompts re-authentication
+
+**Status:** ✅ COMPLETED
 
 ---
 
@@ -164,22 +166,24 @@ This document contains all development tasks for the Go CLI calendar tool, organ
 **Linked User Stories:** US-003
 
 **Subtasks:**
-- [ ] Create `internal/calendar/client.go` with Calendar client struct
-- [ ] Implement `NewClient` function that takes OAuth2 token
-- [ ] Implement `CreateEvent` method with event parameters:
+- [x] Create `internal/calendar/client.go` with Calendar client struct
+- [x] Implement `NewClient` function that takes OAuth2 token
+- [x] Implement `CreateEvent` method with event parameters:
   - Title (summary)
   - Start time
   - End time (calculated from duration)
   - Description (optional)
   - Location (optional)
-- [ ] Implement response parsing to extract event details and link
-- [ ] Handle API errors with user-friendly messages
-- [ ] Write integration tests (with test calendar)
+- [x] Implement response parsing to extract event details and link
+- [x] Handle API errors with user-friendly messages
+- [x] Write integration tests (with test calendar)
 
 **Acceptance Criteria:**
 - Events are created successfully in Google Calendar
 - Event link is returned after creation
 - API errors are handled gracefully
+
+**Status:** ✅ COMPLETED
 
 ---
 
@@ -190,19 +194,21 @@ This document contains all development tasks for the Go CLI calendar tool, organ
 **Linked User Stories:** US-004
 
 **Subtasks:**
-- [ ] Create `internal/calendar/datetime.go` with parsing functions
-- [ ] Support ISO 8601 format: "2024-01-15T14:00:00"
-- [ ] Support natural format: "2024-01-15 14:00"
-- [ ] Support time-only format: "14:00" (assumes today)
-- [ ] Support relative formats: "tomorrow 14:00", "in 2 hours"
-- [ ] Implement timezone handling from `TZ` environment variable
-- [ ] Fall back to system timezone if not configured
-- [ ] Write unit tests for all date formats
+- [x] Create `internal/calendar/datetime.go` with parsing functions
+- [x] Support ISO 8601 format: "2024-01-15T14:00:00"
+- [x] Support natural format: "2024-01-15 14:00"
+- [x] Support time-only format: "14:00" (assumes today)
+- [x] Support relative formats: "tomorrow 14:00", "in 2 hours"
+- [x] Implement timezone handling from `TZ` environment variable
+- [x] Fall back to system timezone if not configured
+- [x] Write unit tests for all date formats
 
 **Acceptance Criteria:**
 - All specified date formats are parsed correctly
 - Timezone is respected in parsing and display
 - Invalid formats return helpful error messages
+
+**Status:** ✅ COMPLETED
 
 ---
 

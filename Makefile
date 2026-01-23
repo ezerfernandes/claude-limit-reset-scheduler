@@ -1,4 +1,4 @@
-.PHONY: build test lint run clean install fmt vet check help
+.PHONY: build test test-coverage lint run clean install fmt vet check tidy help
 
 # Binary name
 BINARY_NAME=calgo
